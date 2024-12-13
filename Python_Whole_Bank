@@ -1,12 +1,97 @@
-employee_number = "sentinel"
-parts = " "
-while employee_number:
-    valid = True 
-    employee_number = input("Enter employee number (ddd-dd-dddd) : ")
-    parts = employee_number.split('-')
-    if len(parts) == 3:
-        if len(parts[0]) == 3 and len(parts[1]) == 2 and len(parts[2]) == 4:
-            if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit():
-                valid = False
-            print(valid)
+def safe_root(a,b):
+    if a%2==0:
+        answer = a **(1/b)
+    if a >= 0:
+        if a%2==0:
+            answer = "Result is an imaginary number"
+        else:
+            answer = -(-a) ** (1/b)
+    return answer
+# Ques. 1 : Coding a math utility
+#If a is non-negative, return a ** (1 / b). If a is negative and even, return "Result is an imaginary number". If a is negative and odd, return -(-a) ** (1 / b)
 
+def get_name(name):
+    name = input("What is your name? ")
+    return name
+def calc_calories(miles, calories_per_mile):
+    calories = miles * calories_per_mile
+    return calories
+distance = int(input("How many miles did you bike this week? "))
+burn_rate = 50
+biker = get_name()
+calories_burned = calc_calories(distance, burn_rate)
+print(biker, ", you burned about", calories_burned, "calories.")
+
+# Ques. 2 : The ABC company is creating a program that allows customers to log the number of miles biked. The program will send messages based on how many miles the
+#customer logs
+
+
+def count_letter(letter, word_list):
+    count = 0
+    for word in word_list:
+        if letter in word:
+            count +=1
+        return count
+    
+word_list = []
+letter = input("what letter would you like to count? ")
+letter_count = count_letter(letter, word_list)
+print("There are: ", letter_count, " instances of " + letter)
+#Ques. 19:  The ABC company needs a way to find the count of particular letters in their publications to ensure that there is a good balance
+
+p = 2
+while p <= 100:
+    is_prime = True
+    for i in range(2, p):
+        if p % i == 0:
+            is_prime = False
+        break
+
+    if is_prime == True:
+        print(p)
+
+    p = p +1
+
+#Ques. 20: building a Python program that displays all of the prime numbers from 2 to 100.
+
+
+import math 
+l =[str(round(math.pi)) for i in range (1, 6)]
+print(l) 
+#Ques. 21 : Correct output : Answer is ['3', '3', '3', '3', '3']
+
+def update_score(current, value):
+    current += value
+    return current
+
+#Ques. 22 : creating a function that meets the certain criteria
+
+sum = count = done = 0
+average = 0.0
+while (done != -1):
+    rating = float(input("Enter next rating (1-5) or -1 for done "))
+    if rating == -1:
+        break
+    sum += rating
+    count += 1
+average = float(sum/count)
+print("The average star rating for the NetVerZleep coffee is: " + format(average, '.2d'))
+#Ques. 23 COME BACK TO PLEASE
+
+import random
+print(int(random.random() * 5))
+#Ques. 24 Answer : It will print a random int value from 0 to 5
+
+
+grade = int(input("Enter a numeric grade "))
+if grade >= 90:
+    letter_grade = "A"
+elif grade >= 80:
+    letter_grade = "B"
+elif grade >= 70:
+    letter_grade = "C"
+elif grade >= 60:
+    letter_grade = "D"
+else:
+    letter_grade = "F"
+#Ques. 25: decision structure to convert a student’s numeric grade to a letter grade. Answers are correct (the block of code)

@@ -95,3 +95,20 @@ elif grade >= 60:
 else:
     letter_grade = "F"
 #Ques. 25: decision structure to convert a student’s numeric grade to a letter grade. Answers are correct (the block of code)
+
+productIDList  = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+index = 0
+while (index < 10):
+    print(productIDList[index])
+    if productIDList[index] == 6:
+        break
+    else:
+        index += 1
+#Ques. 26: You are developing a Python application for an online product distribution company.
+
+rooms = {1: 'Froyer', 2: 'Conference Room'}
+room = input('Enter the room number: ')
+if not room in rooms:
+    print('Room does not exist.')
+else:
+    print("The room name is " + rooms[room])

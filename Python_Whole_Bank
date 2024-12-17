@@ -112,3 +112,5 @@ if not room in rooms:
     print('Room does not exist.')
 else:
     print("The room name is " + rooms[room])
+
+name = input("Enter your name: ")
